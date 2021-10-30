@@ -1,0 +1,7 @@
+{% autoescape off %}
+Verify email
+Welcome, {{ user.email }}
+
+http://{{domain}}{% url 'activate' uidb64=uid token=token %}
+
+{% endautoescape %}

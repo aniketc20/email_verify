@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2>Register</h2>
+        <form id="signup" method="POST">
+            {% csrf_token %}
+            <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <input type="password" name="password1" id="inputPassword1" class="form-control" placeholder="Password" required>
+            <input type="password" name="password2" id="inputPassword2" class="form-control" placeholder="Confirm Password" required>
+            <input name="register" id="register" class="btn btn-block login-btn" type="submit" value="Register">
+        </form>
+
+{% endblock content %}
